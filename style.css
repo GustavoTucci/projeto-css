@@ -1,0 +1,349 @@
+:root {
+  --bg: #f3f1ee;
+  --panel: #ffffff;
+  --text: #1f1f1f;
+  --muted: #5e5d5b;
+  --accent: #2d6cdf;
+  --accent-soft: #dfeafc;
+  --border: rgba(31, 31, 31, 0.8);
+  --shadow: rgba(20, 20, 20, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f7f5 0%, #f0efed 100%);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.label {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.workspace {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 18px;
+  row-gap: 18px;
+  column-gap: 18px;
+  place-content: center;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  min-height: 120px;
+  background: linear-gradient(135deg, #ffffff, #edf3ff);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 140px;
+  align-self: auto;
+  flex: 1 1 140px;
+}
+
+.card::before {
+  content: attr(data-label);
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.12);
+}
+
+.item1 {
+  background: #ff6b6b;
+  margin: 6px 8px 12px 10px;
+  padding: 14px 18px;
+  border-width: 2px;
+  order: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 120px;
+}
+
+.item2 {
+  background: #feca57;
+  margin: 10px 12px 8px 14px;
+  padding: 16px 14px 12px;
+  border-width: 3px;
+  order: 2;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 110px;
+}
+
+.item3 {
+  background: #48dbfb;
+  margin: 8px 10px 14px 8px;
+  padding: 12px 18px 14px;
+  border-width: 2px;
+  order: 3;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 130px;
+}
+
+.item4 {
+  background: #1dd1a1;
+  margin: 12px 14px 10px 12px;
+  padding: 20px 16px;
+  border-width: 4px;
+  order: 4;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 140px;
+}
+
+.item5 {
+  background: #a29bfe;
+  margin: 4px 16px 12px 8px;
+  padding: 18px 18px 10px;
+  border-width: 2px;
+  order: 5;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+
+.item6 {
+  background: #f368e0;
+  margin: 12px 10px 10px 14px;
+  padding: 10px 14px 18px;
+  border-width: 3px;
+  order: 6;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 120px;
+}
+
+.item7 {
+  background: #7bed9f;
+  margin: 6px 14px 14px 10px;
+  padding: 14px 16px;
+  border-width: 2px;
+  order: 7;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 150px;
+}
+
+.item8 {
+  background: #ff9f43;
+  margin: 10px 8px 12px 16px;
+  padding: 18px 12px 16px;
+  border-width: 4px;
+  order: 8;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 110px;
+}
+
+.item9 {
+  background: #c56cf0;
+  margin: 8px 12px 10px 10px;
+  padding: 10px 20px 18px;
+  border-width: 2px;
+  order: 9;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 130px;
+}
+
+.item10 {
+  background: #05c46b;
+  margin: 12px 10px 6px 18px;
+  padding: 16px 14px 8px;
+  border-width: 3px;
+  order: 10;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 125px;
+}
+
+.item11 {
+  background: #ffbe0b;
+  margin: 8px 14px 12px 8px;
+  padding: 12px 18px 20px;
+  border-width: 2px;
+  order: 11;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 140px;
+}
+
+.item12 {
+  background: #3a86ff;
+  margin: 10px 8px 16px 12px;
+  padding: 20px 14px 12px;
+  border-width: 4px;
+  order: 12;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 105px;
+}
+
+.item13 {
+  background: #e63946;
+  margin: 4px 12px 10px 16px;
+  padding: 8px 16px 18px;
+  border-width: 2px;
+  order: 13;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 122px;
+}
+
+.item14 {
+  background: #90e0ef;
+  margin: 12px 18px 8px 10px;
+  padding: 18px 10px 12px;
+  border-width: 3px;
+  order: 14;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 130px;
+}
+
+.item15 {
+  background: #ef476f;
+  margin: 6px 10px 12px 16px;
+  padding: 14px 18px 10px;
+  border-width: 2px;
+  order: 15;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 140px;
+}
+
+.item16 {
+  background: #06d6a0;
+  margin: 10px 12px 8px 8px;
+  padding: 10px 16px 20px;
+  border-width: 4px;
+  order: 16;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 118px;
+}
+
+.item17 {
+  background: #f9c74f;
+  margin: 8px 10px 14px 12px;
+  padding: 18px 20px 8px;
+  border-width: 2px;
+  order: 17;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 150px;
+}
+
+.item18 {
+  background: #9bdeac;
+  margin: 14px 8px 10px 16px;
+  padding: 12px 18px 16px;
+  border-width: 3px;
+  order: 18;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 110px;
+}
+
+.item19 {
+  background: #ff7f50;
+  margin: 10px 16px 12px 8px;
+  padding: 16px 12px 10px;
+  border-width: 2px;
+  order: 19;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 128px;
+}
+
+.item20 {
+  background: #6c5ce7;
+  margin: 8px 12px 6px 10px;
+  padding: 14px 18px 18px;
+  border-width: 4px;
+  order: 20;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 120px;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .objetivos {
+    padding: 18px 20px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 120px;
+    min-height: 100px;
+  }
+}
